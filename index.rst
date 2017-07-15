@@ -12,6 +12,7 @@ Welcome to addon vCloud Driver documentation!
    Release Notes <release_notes/index>
    Compatibility Guide <compatibility/index>
    vCloud Driver Installation <vcloud_installation/index>
+   vCloud Driver Usage <vcloud_usage/index>
 
 
 Introduction
