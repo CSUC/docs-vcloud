@@ -8,11 +8,14 @@ Install vCloud Driver for OpenNebula
 
 Step 1. Download and copy the files in their respective directories:
 ====================================================================
-    - 5.0/remotes/vmm/vcloud 				  	-> /var/lib/one/remotes/vmm/
-    - 5.0/remotes/im/vloud.d 					-> /var/lib/one/remotes/im/
-    - 5.0/remotes/datastore/vcloud 				-> /var/lib/one/datastore
-    - 5.0/remotes/hooks/dv            -> /var/lib/one/remotes/hooks
-    - 5.0/remotes/vmm/vcloud/vcloud_driver.rb 	-> /usr/lib/one/ruby
+
+.. code-block:: bash
+
+    5.0/remotes/vmm/vcloud 				  	      -> /var/lib/one/remotes/vmm/
+    5.0/remotes/im/vloud.d 					        -> /var/lib/one/remotes/im/
+    5.0/remotes/datastore/vcloud 			      -> /var/lib/one/datastore
+    5.0/remotes/hooks/dv                    -> /var/lib/one/remotes/hooks
+    5.0/remotes/vmm/vcloud/vcloud_driver.rb -> /usr/lib/one/ruby
 
 Step 2. Change permissions and owner:
 =====================================
@@ -117,5 +120,26 @@ Step 4. Restart ONE service.
 .. code-block:: bash
 
  	service opennebula restart
+
+Step 5. Install ``ruby_vcloud_sdk``
+====================================
+
+As a root:
+
+**1.Install dependencies**
+
+.. code-block:: bash
+
+  apt-get install make g++ ruby-dev zlib1g-dev liblzma-dev 
+
+
+**2.Download and install the gem**
+
+There are two gems, one for vCloud Director 5.5 and other for vCloud Director 8 Install the specific gem for your vCloud Director version
+
+.. code-block:: bash 
+  
+  gem install ruby_vcloud[VCD_version]_sdk-[current_gem_version].gem
+
 
 

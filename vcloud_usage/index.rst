@@ -10,6 +10,12 @@ First Steps
 
 The first step is import to OpenNebula the resources hosted in vCloud using the ``onevcloud`` script.
 
+**Import Hosts,Templates, Networks and Datastore using ``onevcloud`` script**
+
+When vCloud Driver is installed correctly, it's time to use onevcloud script to import the resources of vCloud.
+
+  /var/lib/one/remotes/vmm/vcloud/onevcloud [hosts | templates | networks | datastores] --vcloud [vcloud-uri.com] --vuser [user@organization] --vpass [password] --vdc [VDC_name]
+
 Hosts
 =====
 
