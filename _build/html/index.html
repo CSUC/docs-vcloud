@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to addon vCloud Driver documentation! &mdash; vCloud Driver Documentation 0.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="vCloud Driver Documentation 0.3 documentation" href="#"/>
+        <link rel="next" title="Release Notes" href="release_notes/index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> vCloud Driver Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="release_notes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compatibility/index.html">Compatibility Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcloud_installation/index.html">vCloud Driver Installation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">vCloud Driver Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to addon vCloud Driver documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-addon-vcloud-driver-documentation">
+<h1>Welcome to addon vCloud Driver documentation!<a class="headerlink" href="#welcome-to-addon-vcloud-driver-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="release_notes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compatibility/index.html">Compatibility Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vcloud_installation/index.html">vCloud Driver Installation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This addon gives Opennebula the posibility to manage resources in VMware vCloud Director infraestructures. It includes virtualization and monitoring drivers.</p>
+<a class="reference internal image-reference" href="_images/one_vcloud.png"><img alt="_images/one_vcloud.png" class="align-center" src="_images/one_vcloud.png" style="width: 45%;" /></a>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>This addon has the following capabilities:</p>
+<ul class="simple">
+<li>Deploy, stop, shutdown, reboot, save, suspend, resume and delete VM’s in the Virtual Data Centers hosted in vCloud.</li>
+<li>Create, delete and revert snapshots of VM’s.</li>
+<li>Change RAM and CPU values of VM.</li>
+<li>It’s able to hot-attach and detach NICs to VM’s.</li>
+<li>Attach disks to VM, only in cold. To avoid accidental disk remove, the detach disk option is disabled in OpenNebula. If you want enable this option, see Guide section.</li>
+<li>Resize disks during the instantiation. Only increase the size, not decrease.</li>
+<li>Automatized customization of the VMs instanciated.</li>
+<li>It’s able to choose wich storage profile will be storaged the VM’s disk or disks.</li>
+<li>Port filtering via vShield during the VM instanciation.</li>
+<li>Obtain monitoring information from the VDC, Datastore and VM’s.</li>
+<li>In this development version we manage vApps with one VMs inside (A VM in OpenNebula equals a vApp with one VM in vCloud).</li>
+<li>Each Virtual Data Center (VDC) in vCloud is managed as a Host in OpenNebula.</li>
+<li>Import networks, hosts, templates and datastores hosted in vCloud using onevcloud script.</li>
+</ul>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<p>To contribute bug patches or new features, you can use the github
+Pull Request model. It is assumed that code and documentation are
+contributed under the Apache License 2.0.</p>
+</div>
+<div class="section" id="more-info">
+<h2>More info<a class="headerlink" href="#more-info" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://opennebula.org/software:addons#how_to_contribute_to_an_existing_add-on">How to Contribute</a></li>
+<li>Support: <a class="reference external" href="https://forum.opennebula.org/c/support">OpenNebula user forum</a></li>
+<li>Development: <a class="reference external" href="https://forum.opennebula.org/c/development">OpenNebula developers forum</a></li>
+<li>Issues Tracking: <a class="reference external" href="https://github.com/OpenNebula/addon-vcloud-driver/issues">Github issues</a></li>
+</ul>
+</div>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Cloud Systems Developer:</strong> Arnau Colominas (<a class="reference external" href="mailto:arnau&#46;colominas&#37;&#52;&#48;csuc&#46;cat">arnau<span>&#46;</span>colominas<span>&#64;</span>csuc<span>&#46;</span>cat</a>)</li>
+<li><strong>Cloud Systems Engineer:</strong>  Miguel Ángel Flores (<a class="reference external" href="mailto:miguel&#46;angel&#46;flores&#37;&#52;&#48;csuc&#46;cat">miguel<span>&#46;</span>angel<span>&#46;</span>flores<span>&#64;</span>csuc<span>&#46;</span>cat</a>)</li>
+<li><strong>Cloud Systems Engineer:</strong> Xavier Peralta (<a class="reference external" href="mailto:xavier&#46;peralta&#37;&#52;&#48;csuc&#46;cat">xavier<span>&#46;</span>peralta<span>&#64;</span>csuc<span>&#46;</span>cat</a>)</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="release_notes/index.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Miguel Ángel Flores Terrón.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

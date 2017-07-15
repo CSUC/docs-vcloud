@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install vCloud Driver for OpenNebula &mdash; vCloud Driver Documentation 0.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="vCloud Driver Documentation 0.3 documentation" href="../index.html"/>
+        <link rel="prev" title="Compatibility" href="../compatibility/index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> vCloud Driver Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compatibility/index.html">Compatibility Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">vCloud Driver Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-download-and-copy-the-files-in-their-respective-directories">Step 1. Download and copy the files in their respective directories:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-change-permissions-and-owner">Step 2. Change permissions and owner:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-modify-the-etc-one-oned-conf-configuration-file-adding-the-following-new-lines">Step 3. Modify the <code class="docutils literal"><span class="pre">/etc/one/oned.conf</span></code> configuration file adding the following new lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-restart-one-service">Step 4. Restart ONE service.</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vCloud Driver Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Install vCloud Driver for OpenNebula</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/vcloud_installation/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="install-vcloud-driver-for-opennebula">
+<h1>Install vCloud Driver for OpenNebula<a class="headerlink" href="#install-vcloud-driver-for-opennebula" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="step-1-download-and-copy-the-files-in-their-respective-directories">
+<h2>Step 1. Download and copy the files in their respective directories:<a class="headerlink" href="#step-1-download-and-copy-the-files-in-their-respective-directories" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>5.0/remotes/vmm/vcloud                                    -&gt; /var/lib/one/remotes/vmm/</li>
+<li>5.0/remotes/im/vloud.d                                    -&gt; /var/lib/one/remotes/im/</li>
+<li>5.0/remotes/datastore/vcloud                              -&gt; /var/lib/one/datastore</li>
+<li>5.0/remotes/hooks/dv            -&gt; /var/lib/one/remotes/hooks</li>
+<li>5.0/remotes/vmm/vcloud/vcloud_driver.rb   -&gt; /usr/lib/one/ruby</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="step-2-change-permissions-and-owner">
+<h2>Step 2. Change permissions and owner:<a class="headerlink" href="#step-2-change-permissions-and-owner" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>chown -R oneadmin:oneadmin /var/lib/one/remotes/vmm/vcloud /var/lib/one/remotes/im/vcloud.d /var/lib/one/remotes/datastore/vcloud /var/lib/one/remotes/hooks/dv
+
+chmod -R +x /var/lib/one/remotes/vmm/vcloud /var/lib/one/remotes/im/vcloud.d /var/lib/one/remotes/datastore/vcloud /var/lib/one/remotes/hooks/dv
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-modify-the-etc-one-oned-conf-configuration-file-adding-the-following-new-lines">
+<h2>Step 3. Modify the <code class="docutils literal"><span class="pre">/etc/one/oned.conf</span></code> configuration file adding the following new lines<a class="headerlink" href="#step-3-modify-the-etc-one-oned-conf-configuration-file-adding-the-following-new-lines" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>In IM_MAD section:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre> <span class="c">#-------------------------------------------------------------------------------</span>
+ <span class="c">#  VMware vCloud Director Information Driver Manager Configuration</span>
+ <span class="c">#-------------------------------------------------------------------------------</span>
+ <span class="nv">IM_MAD</span> <span class="o">=</span> <span class="o">[</span>
+<span class="nv">name</span>       <span class="o">=</span> <span class="s2">&quot;vcloud&quot;</span>,
+<span class="nv">executable</span> <span class="o">=</span> <span class="s2">&quot;one_im_sh&quot;</span>,
+<span class="nv">arguments</span>  <span class="o">=</span> <span class="s2">&quot;-c -t 15 -r 0 vcloud&quot;</span><span class="o">]</span>
+<span class="c">#-------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>In VM_MAD section:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c">#-------------------------------------------------------------------------------</span>
+<span class="c">#  VMware vCloud Director Virtualization Driver Manager Configuration</span>
+<span class="c">#-------------------------------------------------------------------------------</span>
+<span class="nv">VM_MAD</span> <span class="o">=</span> <span class="o">[</span>
+       <span class="nv">name</span>       <span class="o">=</span> <span class="s2">&quot;vcloud&quot;</span>,
+       <span class="nv">executable</span> <span class="o">=</span> <span class="s2">&quot;one_vmm_sh&quot;</span>,
+       <span class="nv">arguments</span>  <span class="o">=</span> <span class="s2">&quot;-p -t 15 -r 0 vcloud -s sh&quot;</span>,
+       <span class="nb">type</span>       <span class="o">=</span> <span class="s2">&quot;xml&quot;</span> <span class="o">]</span>
+<span class="c">#------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>In HOOK section:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c">#-------------------------------------------------------------------------------</span>
+<span class="c">#   VMware vCloud Director Hook Manager Configuration</span>
+<span class="c">#-------------------------------------------------------------------------------</span>
+<span class="nv">VM_HOOK</span> <span class="o">=</span> <span class="o">[</span>
+ <span class="nv">name</span> <span class="o">=</span> <span class="s2">&quot;delete_poweroff_vms&quot;</span>,
+ <span class="nv">on</span> <span class="o">=</span> <span class="s2">&quot;DONE&quot;</span>,
+ <span class="nb">command</span> <span class="o">=</span> <span class="s2">&quot;dv/delete_poweroff_vms.rb&quot;</span>,
+ <span class="nv">arguments</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="nv">$TEMPLATE</span><span class="s2">&quot;</span> <span class="o">]</span>
+<span class="c">#-------------------------------------------------------------------------------</span>
+<span class="nv">VM_HOOK</span> <span class="o">=</span> <span class="o">[</span>
+ <span class="nv">name</span>      <span class="o">=</span> <span class="s2">&quot;delete_failed_vms&quot;</span>,
+ <span class="nv">on</span>        <span class="o">=</span> <span class="s2">&quot;CUSTOM&quot;</span>,
+ <span class="nv">state</span>     <span class="o">=</span> <span class="s2">&quot;ACTIVE&quot;</span>,
+ <span class="nv">lcm_state</span> <span class="o">=</span> <span class="s2">&quot;BOOT_FAILURE&quot;</span>,
+ <span class="nb">command</span>   <span class="o">=</span> <span class="s2">&quot;dv/delete_failed_vms.rb&quot;</span>,
+ <span class="nv">arguments</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="nv">$TEMPLATE</span><span class="s2">&quot;</span>
+<span class="o">]</span>
+<span class="c">#-------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>In TM_MAD section:</li>
+</ul>
+<p>We need to add vcloud as a argument.This section must be like this:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">TM_MAD</span> <span class="o">=</span> <span class="o">[</span>
+        <span class="nv">executable</span> <span class="o">=</span> <span class="s2">&quot;one_tm&quot;</span>,
+        <span class="nv">arguments</span> <span class="o">=</span> <span class="s2">&quot;-t 15 -d dummy,lvm,shared,vcloud,fs_lvm,qcow2,ssh,vmfs,ceph,dev&quot;</span>
+        <span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>In DS_MAD section:</li>
+</ul>
+<p>We need to add vcloud as a argument.This section must be like this:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">DATASTORE_MAD</span> <span class="o">=</span> <span class="o">[</span>
+<span class="nv">executable</span> <span class="o">=</span> <span class="s2">&quot;one_datastore&quot;</span>,
+<span class="nv">arguments</span>  <span class="o">=</span> <span class="s2">&quot;-t 15 -d dummy,vcloud,fs,vmfs,lvm,ceph,dev&quot;</span>
+<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Add the following lines at the end of the file in the Transfer Manager Driver Behavior Configuration section:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">TM_MAD_CONF</span> <span class="o">=</span> <span class="o">[</span>
+        <span class="nv">name</span> <span class="o">=</span> <span class="s2">&quot;vcloud&quot;</span>, <span class="nv">ln_target</span> <span class="o">=</span> <span class="s2">&quot;NONE&quot;</span>, <span class="nv">clone_target</span> <span class="o">=</span> <span class="s2">&quot;NONE&quot;</span>, <span class="nv">shared</span> <span class="o">=</span> <span class="s2">&quot;yes&quot;</span>
+        <span class="o">]</span>
+
+        <span class="nv">DS_MAD_CONF</span> <span class="o">=</span> <span class="o">[</span>
+        <span class="nv">NAME</span> <span class="o">=</span> <span class="s2">&quot;vcloud&quot;</span>, <span class="nv">REQUIRED_ATTRS</span> <span class="o">=</span> <span class="s2">&quot;VCLOUD_HOST&quot;</span>, <span class="nv">PERSISTENT_ONLY</span> <span class="o">=</span> <span class="s2">&quot;YES&quot;</span>,
+        <span class="nv">MARKETPLACE_ACTIONS</span> <span class="o">=</span> <span class="s2">&quot;export&quot;</span>
+        <span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-4-restart-one-service">
+<h2>Step 4. Restart ONE service.<a class="headerlink" href="#step-4-restart-one-service" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>service opennebula restart
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../compatibility/index.html" class="btn btn-neutral" title="Compatibility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Miguel Ángel Flores Terrón.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
