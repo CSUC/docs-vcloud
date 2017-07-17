@@ -8,11 +8,13 @@ Usage vCloud Driver for OpenNebula
 First Steps
 ===========
 
-The first step is import to OpenNebula the resources hosted in vCloud using the ``onevcloud`` script.
+The first step is import to OpenNebula the resources hosted in vCloud using the onevcloud script.
 
 **Import Hosts,Templates, Networks and Datastore using ``onevcloud`` script**
 
 When vCloud Driver is installed correctly, it's time to use onevcloud script to import the resources of vCloud.
+
+.. code-block:: bash
 
   /var/lib/one/remotes/vmm/vcloud/onevcloud [hosts | templates | networks | datastores] --vcloud [vcloud-uri.com] --vuser [user@organization] --vpass [password] --vdc [VDC_name]
 
@@ -25,7 +27,7 @@ Hosts
   
 
 .. image:: /images/vcloud_host.png
-    :width: 75%
+    :width: 100%
     :align: center
 
 Templates
@@ -36,7 +38,7 @@ Templates
     /var/lib/one/remotes/vmm/vcloud/onevcloud hosts --vcloud [vcloud-uri.com] --vuser [user@organization] --vpass [password] --vdc [VDC_name]
 
 .. image:: /images/vcloud_templates.png
-    :width: 75%
+    :width: 100%
     :align: center
 
 Networks
@@ -50,7 +52,7 @@ For that reason, when you use the script to import networks to OpenNebula you mu
     /var/lib/one/remotes/vmm/vcloud/onevcloud networks --vcloud [vcloud-uri.com] --vuser [user@organization] --vpass [password] --vdc [VDC_name]
 
 .. image:: /images/vcloud_networks.png
-    :width: 75%
+    :width: 100%
     :align: center
 
 Intanciate Templates
@@ -59,11 +61,11 @@ Intanciate Templates
 When the resources are imported correctly, we can start to instanciate templates!
 
 .. image:: /images/vcloud_vm.png
-    :width: 75%
+    :width: 100%
     :align: center
 
 .. image:: /images/vcloud_vm2.png
-    :width: 75%
+    :width: 100%
     :align: center
 
 Templates Context Variables

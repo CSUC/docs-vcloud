@@ -53,7 +53,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'vCloud Driver Documentation'
 copyright = u'2017, Miguel Ángel Flores Terrón'
-author = u'Miguel Ángel Flores Terrón'
+author = u'Miguel Ángel Flores Terrón, Arnau Colominas'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
